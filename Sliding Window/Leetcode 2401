@@ -1,0 +1,30 @@
+Question - And of every pair of element in the subarray is 0
+
+Hint - Subarray -> Sliding window
+
+Approach - for l to r use for loop to check all the elements have and  0;
+
+if(valid ) = len =max(max, r-l+1);
+else {
+l++;
+}
+ while(r<n){
+            boolean isValid = true;
+           
+            for(int i = l; i<r;i++){
+                if ((nums[i] & nums[r]) != 0) { 
+                    isValid = false;
+                    break;
+                }
+            }
+       if (isValid) {
+                
+                maxLen = Math.max(maxLen, r - l + 1);
+                r++;  
+            } else {
+              
+                l++;
+            }
+        }
+        return maxLen;
+    }
