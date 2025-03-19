@@ -32,3 +32,6 @@ Code - class Solution {
         return cnt;
     }
 }
+
+Time Complexity - O(2n) 
+Space Complexity - O(1)
